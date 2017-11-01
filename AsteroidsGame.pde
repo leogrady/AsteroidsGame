@@ -1,13 +1,11 @@
 Spaceship test;
 Stars sky[] = new Stars[50];
-Asteroid example;
 Asteroid boulder[] = new Asteroid [4];
 
 public void setup() 
 {
   size (500,500);
   test = new Spaceship();
-  example = new Asteroid();
   for (int i=0; i < sky.length; i++){ sky[i] = new Stars();}
   for (int j = 0; j< boulder.length; j++){boulder[j] = new Asteroid();}
 }
@@ -28,6 +26,9 @@ public void draw()
  	fill (255,0,0);
  	test.setDirectionX(0);
  	test.setDirectionY(0);
+ 	for (int i=0; i <boulder.length; i++){
+ 		boulder[i].setTurnSpeed(0);
+ 	}
  	textSize(50);
  	text ("You Lose",150,200);
 
