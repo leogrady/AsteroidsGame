@@ -9,32 +9,26 @@ public void setup()
   test = new Spaceship();
   for (int i=0; i < sky.length; i++){ sky[i] = new Stars();}
   theList = new ArrayList <Asteroid>();
- for (int i = 0; i < 6; i++){
+  for (int i = 0; i < 6; i++){
  	theList.add (new Asteroid());
- }
-  //for (int j = 0; j< boulder.length; j++){boulder[j] = new Asteroid();}
- }
+  }
 
- public void draw() 
- {
+}
+
+public void draw() 
+{
  background(0);	
  for (int i =0; i <sky.length; i++){sky[i].show();}
  for (int j = 0; j< theList.size(); j++){
  	theList.get(j).show();
  	theList.get(j).move();
  }
-
  test.show();
  test.move();
-
-
-for (int k = 0; k < theList.size(); k++){
+ for (int k = 0; k < theList.size(); k++){
 	if (dist(test.getX(), test.getY(), theList.get(k).getX(), theList.get(k).getY())<30)
 		theList.remove(k);
-}
-
-
-
+  }
  /*
  CODE WITH HEALTHBAR AND EVERYTHING
  stroke(255);
@@ -72,7 +66,7 @@ for (int k = 0; k < theList.size(); k++){
  }*/
 }
 
- void keyPressed()
+void keyPressed()
 {
     if (key == CODED)
  	{
