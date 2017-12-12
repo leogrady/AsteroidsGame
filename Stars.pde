@@ -2,8 +2,8 @@ class Stars
 {
   private int starX, starY, starColor;
   Stars(){
-  	starX = (int)(Math.random()*500);
-  	starY = (int)(Math.random()*500);
+  	starX = (int)(Math.random()*700);
+  	starY = (int)(Math.random()*700);
   	//starX = 250;
   	//starY = 250;
   	starColor = (int)(Math.random()*150)+100;
