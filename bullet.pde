@@ -4,7 +4,7 @@ class Bullet extends Floater
 		myCenterX = test.getX() ;
 		myCenterY = test.getY() ;
 	    myPointDirection = theShip.getPointDirection();
-		double dRadians =myPointDirection*(Math.PI/180);
+		double dRadians = myPointDirection*(Math.PI/180);
 		myDirectionX =  5 * Math.cos(dRadians) + theShip.getDirectionX();
 		myDirectionY =  5 * Math.sin(dRadians) + theShip.getDirectionY();
 		myColor = color(255,0,0);
@@ -15,7 +15,7 @@ class Bullet extends Floater
 		yCorners[0] =  0;
 	}
 
-    public void move ()   //move the floater in the current direction of travel
+    public void move ()   
     {      
         myCenterX += myDirectionX;    
     	myCenterY += myDirectionY; 
